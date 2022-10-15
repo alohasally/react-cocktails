@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Cocktail = ({image, name, id, info, glass }) => {
+const Cocktail = ({image, name, id, info, glass }) => {
   return (
     <article className='cocktail'>
       <div className='img-container'>
@@ -11,7 +11,12 @@ export const Cocktail = ({image, name, id, info, glass }) => {
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
+        <Link to={`/cocotail/${id}`} className='btn btn-primary btn-details'>
+          details
+        </Link>
         </div>
       </article>
   )
 }
+
+export default Cocktail;

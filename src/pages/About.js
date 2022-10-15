@@ -10,6 +10,7 @@ export default function About() {
          nonum sociis natoque penatibus et justo. 
          Lorem ipsum dolor sit amet, consectetur 
          adip nonum sociis natoque penatibus et justo
+         adip nonum sociis natoque penatibus et justo
       </p>
       </section>
   )

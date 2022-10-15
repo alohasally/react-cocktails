@@ -15,7 +15,7 @@ const AppProvider = ({ children }) => {
       const response = await fetch(`${url}${searchTerm}`)
       const data = await response.json()
       console.log(data);
-      const { drinks } = data
+      const { drinks } = data;
       if (drinks) {
         const newCocktails = drinks.map((item) => {
           const {
@@ -44,12 +44,14 @@ const AppProvider = ({ children }) => {
       setLoading(false)
     }
   },[searchTerm])
+ 
+ 
   useEffect(() => {
     fetchDrinks()
   }, [searchTerm,fetchDrinks])
   return (
     <AppContext.Provider
-      value={{ loading, cocktails, setSearchTerm }}
+      value={{ loading, cocktails, searchTerm, setSearchTerm }}
     >
       {children}
     </AppContext.Provider>

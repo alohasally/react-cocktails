@@ -1,14 +1,14 @@
 import React from "react";
-import Cocktail from "cocktail";
-import Loading from "loading";
+import Cocktail from "./Cocktail";
+import Loading from "./Loading";
 
 import { useGlobalContext } from '../context';
 
 
-export default function CocktailList() {
+const CocktailList = () => {
   const {cocktails, loading} = useGlobalContext();
   if(loading) {
-    return <Loading/>
+    return <Loading />
   }
   if (cocktails.length < 1) {
     return (
@@ -31,3 +31,5 @@ export default function CocktailList() {
     </section>
   )
 }
+
+export default CocktailList;
